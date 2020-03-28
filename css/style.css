@@ -1,0 +1,290 @@
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: gray;
+}
+
+.menu {
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    top: -12px !important;
+}
+
+.header .logo {
+    position: relative;
+    top: 40px;
+}
+
+.header .logo,
+.menu a {
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.header .icon {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* image Block */
+
+.default {
+    background: url('../images/hand.jpg');
+    height: 630px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    top: -22px !important;
+}
+
+.default h1 {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 3.5em;
+    color: #111;
+}
+
+
+/* testimonial  */
+
+.testimonial {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+.testimonial .title {
+    text-transform: uppercase;
+}
+
+.testimonial .sub-title {
+    font-size: 1.4em;
+}
+
+.testimonial .cards {
+    display: flex;
+}
+
+.testimonial .cards .card {
+    width: 25%;
+    padding: 50px;
+}
+
+.testimonial .cards .card img {
+    max-width: 100%;
+}
+
+
+/* testimonial ends */
+
+
+/* about */
+
+.about {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkcyan;
+}
+
+.about .title {
+    text-transform: uppercase;
+}
+
+.about .sub-title {
+    font-size: 1.4em;
+}
+
+.about .imgs {
+    display: flex;
+}
+
+.about .imgs .im {
+    width: 25%;
+    padding: 80px;
+}
+
+.about .imgs .im img {
+    max-width: 100%;
+}
+
+
+/* events */
+
+.events {
+    width: 100%;
+    padding: 50px;
+    background-color: grey;
+}
+
+.events .e-cards {
+    display: flex;
+}
+
+.events .e-cards .e-card {
+    width: 33.333%;
+    margin: 20px;
+}
+
+.events .e-cards .e-card .card-logo {
+    padding: 50px;
+    background-color: blue;
+    text-align: center;
+    color: #fff;
+}
+
+.events .e-cards .e-card .card-title {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.events .e-cards .e-card .card-desc {
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    display: flex;
+}
+
+.events .e-cards .e-card .card-desc span {
+    position: relative;
+    top: 10px;
+}
+
+.events .e-cards .e-card .card-info {
+    text-align: justify;
+}
+
+.events .e-cards .e-card .card-info a {
+    text-decoration: justify;
+    font-size: 1.3em;
+}
+
+
+/* about ends */
+
+.footer {
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    background: darkcyan;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer .footer-title {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer .footer-sub {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer .form {
+    display: grid;
+    grid-template-columns: repeat(auto, minmax(33.33%, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
+
+.footer .form input,
+.footer .form textarea {
+    padding: 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: solid #fff;
+    font-size: 1em;
+}
+
+.footer .form textarea {
+    grid-column: span 3;
+}
+
+@media screen and (max-width:768px)
+/* responsive menu */
+
+{
+    .menu a:not(:first-child),
+    .menu a {
+        display: none;
+        text-align: left;
+    }
+    .header .icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: #fff;
+    }
+    .menu.responsive a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        transition: all 0.5s ease;
+        position: relative;
+        top: 30px;
+    }
+    /* reponsive menu ends */
+    /* responsive testimonial  */
+    .testimonial .cards {
+        display: block;
+    }
+    .testimonial .cards .card {
+        width: 100%;
+        padding: 10px;
+    }
+    /* reponsive about ends */
+    .about .imgs {
+        display: block;
+    }
+    .about .imgs .im {
+        width: 100%;
+        padding: 10px;
+    }
+    /* reponsive about ends */
+    .events .e-cards {
+        display: block;
+    }
+    .events .e-cards .e-card {
+        width: 100%;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .footer .form input[type='submit'] {
+        grid-column: ;
+    }
+}
